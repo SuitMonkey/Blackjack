@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "C:/Users/Francis C\xE1ceres/Desktop/Programacion aplicada/EjemploBJ21/Blackjack-Unity-master/Assets/Scenes/Main.unity"
+- path: Assets/_Scene/Main.unity
   isLoaded: 1
   isActive: 1
