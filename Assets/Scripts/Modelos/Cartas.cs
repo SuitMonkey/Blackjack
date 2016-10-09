@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+<<<<<<< HEAD
+namespace Modelos 
+{
+=======
 
 
 namespace Modelos
 {
 
+>>>>>>> Development00
 	enum Palo
 	{
 		Trebol,
@@ -15,8 +20,20 @@ namespace Modelos
 	}
 
 	public class Cartas : MonoBehaviour {
+<<<<<<< HEAD
+		Palo palo;
+
+		public Cartas(Palo palo)
+		{
+
+		}
+
+	}
+
+=======
 		string nombrePalo;
 
 
 	}
+>>>>>>> Development00
 }
