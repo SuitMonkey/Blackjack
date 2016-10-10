@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Modelos.Cartas;
+using UnityEngine;
 
 namespace Modelos {
 	public class Mazo {
@@ -26,10 +27,20 @@ namespace Modelos {
 		//Esta funcion es para barajar las cartas
 		//Este metodo recibe las barajas
 		public void barajar(List<Cartas> cartas){
-
+			int n = cartas.Count;
+			while (n > 1) {
+				n--;
+				int rnd = Random.Range (1, 53);
+				Cartas temp = cartas [rnd];
+				cartas [rnd] = cartas [n];
+				cartas [n] = temp;
+			}
 		}
 
-		public object reparatir(){
+		public Cartas reparatir(List<Cartas> cartas){
+			Cartas carta = new Modelos.Cartas ();
+			carta = cartas [cartas.LastIndexOf];
+			cartas.Remove(cartas.LastIndexOf);
 
 		}
 
@@ -45,18 +56,22 @@ namespace Modelos {
 
 		private void crearMazo(){
 			int contador = 0;
-			for(int i = 1; i<=52 ;i++){
-				Cartas carta = new Cartas ();
-				if(i >= 1 && i <= 13 ){
-					cartas.Add(carta);
+			for(int i = 0; i<=52 ;i++){
+
+				if(i >= 1 && i <= 14 ){
+					Cartas carta = new Cartas (Palos.Corazon,((i==13 )? 13:i%13));
+					cartas.Add(cartas);
 				}
-				if (i >= 14 && i <= 27) {
+				if (i > 14 && i <= 26) {
+					Cartas carta = new Cartas (Palos.Corazon,((i==26 )? 13:i%13));
 					cartas.Add (carta);
 				}
-				if (i >= 28 && i <= 41) {
+				if (i > 26 && i <= 39) {
+					Cartas carta = new Cartas (Palos.Corazon,((i==39 )? 13:i%13));
 					cartas.Add (cartas);
 				}
-				if(i>= 42 && i <= 52){
+				if(i > 39 && i <= 52){
+					Cartas carta = new Cartas (Palos.Corazon,((i==52 )? 13:i%13));
 					cartas.Add (cartas);
 				}
 
